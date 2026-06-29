@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026生日限定 · 许蒋将女士的人类使用说明书 💖</title>
+
+    <!-- ========== Google Fonts: Nunito + Quicksand ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           CSS 变量 & 全局重置
+           ============================================================ */
+        :root {
+            --pink: #FFD1DC;
+            --pink-deep: #F8A5C2;
+            --yellow: #FFF3C4;
+            --yellow-deep: #F9E79F;
+            --mint: #D4EFDF;
+            --mint-deep: #A9DFBF;
+            --blue: #D6EAF8;
+            --blue-deep: #AED6F1;
+            --purple: #E8DAEF;
+            --purple-deep: #D2B4DE;
+            --white: #FFFFFF;
+            --text: #5D4E37;
+            --text-light: #8B7D6B;
+            --shadow: 0 8px 32px rgba(0,0,0,0.08);
+            --shadow-hover: 0 12px 40px rgba(0,0,0,0.14);
+            --radius: 20px;
+            --font-main: 'Nunito', 'Quicksand', sans-serif;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            /* 马卡龙渐变背景 */
+            background: linear-gradient(180deg, #FFF0F3 0%, #FFF9E6 20%, #EEF7F2 40%, #F2F6FF 60%, #FAF0F6 80%, #FFF5F5 100%);
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        /* 背景装饰云朵和星星 */
+        .bg-decorations {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-cloud {
+            position: absolute;
+            opacity: 0.35;
+            animation: floatCloud 20s ease-in-out infinite;
+            font-size: 60px;
+        }
+        .bg-cloud:nth-child(1) { top: 8%; left: 5%; animation-delay: 0s; font-size: 70px; }
+        .bg-cloud:nth-child(2) { top: 25%; right: 8%; animation-delay: -5s; font-size: 55px; }
+        .bg-cloud:nth-child(3) { top: 55%; left: 10%; animation-delay: -10s; font-size: 65px; }
+        .bg-cloud:nth-child(4) { top: 75%; right: 12%; animation-delay: -15s; font-size: 50px; }
+        .bg-cloud:nth-child(5) { top: 40%; left: 70%; animation-delay: -3s; font-size: 48px; }
+        .bg-cloud:nth-child(6) { top: 85%; left: 50%; animation-delay: -8s; font-size: 58px; }
+
+        .bg-star {
+            position: absolute;
+            opacity: 0.3;
+            animation: twinkle 3s ease-in-out infinite;
+            font-size: 24px;
+        }
+        .bg-star:nth-child(7)  { top: 12%; left: 25%; animation-delay: 0s; }
+        .bg-star:nth-child(8)  { top: 18%; right: 20%; animation-delay: -0.5s; }
+        .bg-star:nth-child(9)  { top: 35%; left: 45%; animation-delay: -1s; }
+        .bg-star:nth-child(10) { top: 50%; right: 30%; animation-delay: -1.5s; }
+        .bg-star:nth-child(11) { top: 65%; left: 35%; animation-delay: -2s; }
+        .bg-star:nth-child(12) { top: 80%; right: 15%; animation-delay: -2.5s; }
+        .bg-star:nth-child(13) { top: 90%; left: 55%; animation-delay: -0.8s; }
+        .bg-star:nth-child(14) { top: 30%; left: 80%; animation-delay: -1.8s; }
+
+        @keyframes floatCloud {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25%  { transform: translateY(-15px) translateX(10px); }
+            50%  { transform: translateY(-8px) translateX(-5px); }
+            75%  { transform: translateY(-20px) translateX(-10px); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50%  { opacity: 0.5; transform: scale(1.3); }
+        }
+
+        /* ============================================================
+           主容器
+           ============================================================ */
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================================
+           页面顶部 - 动态时间线
+           ============================================================ */
+        .hero-section {
+            text-align: center;
+            padding: 50px 20px 30px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-birthday-line {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--purple-deep);
+            background: linear-gradient(135deg, #F8A5C2, #D2B4DE, #AED6F1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            text-shadow: none;
+            line-height: 1.5;
+        }
+
+        .hero-friendship-line {
+            font-size: 1.1rem;
+            color: var(--text);
+            opacity: 0.85;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-friendship-line .years-num {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--pink-deep);
+        }
+
+        /* ============================================================
+           通用卡片样式
+           ============================================================ */
+        .card {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            padding: 30px 25px;
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        /* ============================================================
+           板块一：人物属性面板
+           ============================================================ */
+        .attribute-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .attribute-item {
+            position: relative;
+        }
+
+        .attribute-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .attribute-value {
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+
+        /* 进度条 */
+        .progress-bar-bg {
+            width: 100%;
+            height: 18px;
+            background: rgba(0,0,0,0.06);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+        }
+        .progress-bar-fill.overflow {
+            animation: overflowPulse 1.5s ease-in-out infinite;
+        }
+        .progress-bar-fill.purple-bar { background: linear-gradient(90deg, #E8DAEF, #D2B4DE); }
+        .progress-bar-fill.blue-bar   { background: linear-gradient(90deg, #D6EAF8, #85C1E9); }
+        .progress-bar-fill.pink-bar   { background: linear-gradient(90deg, #FFD1DC, #F8A5C2); }
+        .progress-bar-fill.yellow-bar { background: linear-gradient(90deg, #FFF3C4, #F9E79F); }
+
+        @keyframes overflowPulse {
+            0%, 100% { filter: brightness(1); }
+            50%  { filter: brightness(1.25); }
+        }
+
+        /* 悬停证据气泡 */
+        .evidence-bubble {
+            display: none;
+            position: absolute;
+            bottom: calc(100% + 12px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FFF9F0;
+            border: 2px dashed var(--yellow-deep);
+            border-radius: 12px;
+            padding: 10px 15px;
+            font-size: 0.82rem;
+            color: var(--text);
+            white-space: normal;
+            max-width: 320px;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            z-index: 10;
+            line-height: 1.5;
+        }
+        .evidence-bubble::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: var(--yellow-deep);
+        }
+        .attribute-item:hover .evidence-bubble {
+            display: block;
+            animation: bubbleIn 0.3s ease;
+        }
+        @keyframes bubbleIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(5px); }
+            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+        .observe-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 18px;
+            font-style: italic;
+        }
+
+        /* 彩蛋1 */
+        .easter-egg-1 {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--pink-deep);
+            margin-top: 8px;
+        }
+
+        /* ============================================================
+           板块二：未来扭蛋机
+           ============================================================ */
+        .gacha-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* CSS 扭蛋机绘制 */
+        .gacha-machine {
+            position: relative;
+            width: 200px;
+            height: 240px;
+            margin: 0 auto;
+        }
+
+        .gacha-body {
+            width: 180px;
+            height: 170px;
+            background: linear-gradient(135deg, #FFF9E6, #FFEAA7);
+            border: 4px solid #F9E79F;
+            border-radius: 30px 30px 20px 20px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: inset 0 -10px 20px rgba(0,0,0,0.06), 0 6px 20px rgba(0,0,0,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .gacha-window {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.9);
+            border: 3px solid #F5B041;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.08);
+            animation: gentleBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes gentleBounce {
+            0%, 100% { transform: translateY(0); }
+            50%  { transform: translateY(-5px); }
+        }
+
+        .gacha-top {
+            width: 110px;
+            height: 50px;
+            background: linear-gradient(135deg, #FFF9E6, #FFEAA7);
+            border: 4px solid #F9E79F;
+            border-radius: 25px 25px 8px 8px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .gacha-tag {
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #B7950B;
+        }
+
+        /* 摇杆 */
+        .gacha-lever {
+            position: absolute;
+            right: 10px;
+            top: 60px;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle at 40% 40%, #FF6B6B, #E74C3C);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(231,76,60,0.4);
+            transition: all 0.15s ease;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+        }
+        .gacha-lever:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 18px rgba(231,76,60,0.5);
+        }
+        .gacha-lever:active {
+            animation: leverShake 0.3s ease;
+        }
+        @keyframes leverShake {
+            0%, 100% { transform: rotate(0deg); }
+            25%  { transform: rotate(-15deg); }
+            50%  { transform: rotate(10deg); }
+            75%  { transform: rotate(-8deg); }
+        }
+        .gacha-lever.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* 掉落的任务卡 */
+        .task-card-popup {
+            background: linear-gradient(135deg, #FFFEF9, #FFF3E0);
+            border: 3px solid #F9E79F;
+            border-radius: 16px;
+            padding: 20px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            animation: cardDrop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: none;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        .task-card-popup.show {
+            display: block;
+        }
+        .task-card-popup .task-title {
+            font-weight: 800;
+            font-size: 1rem;
+            color: #E67E22;
+            margin-bottom: 6px;
+        }
+        .task-card-popup .task-content {
+            color: var(--text);
+        }
+
+        @keyframes cardDrop {
+            from { opacity: 0; transform: translateY(-40px) scale(0.8); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* 打卡进度 */
+        .gacha-progress {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .gacha-progress .stars {
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+        }
+        .gacha-progress .stars .earned { opacity: 1; }
+        .gacha-progress .stars .unearned { opacity: 0.2; }
+        .gacha-progress .progress-text {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        .gacha-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 10px;
+        }
+
+        /* ============================================================
+           板块三：生日预言生成器
+           ============================================================ */
+        .prophecy-section {
+            display: none;
+        }
+        .prophecy-section.unlocked {
+            display: block;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .prophecy-card {
+            background: linear-gradient(135deg, #FFF8E7, #FEF5E7, #FDEBD0);
+            border: 3px solid #E8D5B7;
+            border-radius: 16px;
+            padding: 30px 25px;
+            position: relative;
+            font-family: var(--font-main);
+            line-height: 1.8;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            animation: parchmentUnroll 1s ease;
+        }
+        @keyframes parchmentUnroll {
+            from { opacity: 0; clip-path: inset(0 0 100% 0); }
+            to   { opacity: 1; clip-path: inset(0 0 0 0); }
+        }
+        .prophecy-card .proph-title {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #8B6914;
+            margin-bottom: 16px;
+        }
+        .prophecy-card .proph-body {
+            font-size: 0.9rem;
+            color: #5D4E37;
+        }
+        .prophecy-card .proph-body .highlight {
+            color: #E74C3C;
+            font-weight: 700;
+        }
+        .prophecy-card .proph-sign {
+            text-align: right;
+            margin-top: 20px;
+            font-style: italic;
+            color: #8B6914;
+            font-weight: 600;
+        }
+
+        .prophecy-btn-wrapper {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* ============================================================
+           按钮样式
+           ============================================================ */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 25px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            letter-spacing: 0.5px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .btn-pink {
+            background: linear-gradient(135deg, #FFD1DC, #F8A5C2);
+            color: #5D4E37;
+        }
+        .btn-purple {
+            background: linear-gradient(135deg, #E8DAEF, #D2B4DE);
+            color: #5D4E37;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #FFF3C4, #F9E79F);
+            color: #5D4E37;
+        }
+        .btn-wedding {
+            background: linear-gradient(135deg, #FADBD8, #F5B7B1);
+            color: #5D4E37;
+            font-size: 1.2rem;
+            padding: 16px 40px;
+            border-radius: 30px;
+        }
+
+        /* ============================================================
+           板块四：线上婚礼
+           ============================================================ */
+        .wedding-section {
+            display: none;
+        }
+        .wedding-section.active {
+            display: block;
+        }
+
+        .wedding-enter-btn {
+            text-align: center;
+            display: none;
+        }
+        .wedding-enter-btn.show {
+            display: block;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        /* 婚礼场景 */
+        .wedding-scene {
+            position: relative;
+            min-height: 600px;
+            border-radius: 24px;
+            padding: 40px 25px;
+            margin: 30px 0;
+            background: linear-gradient(180deg, #FFF0F3 0%, #FDF2F8 30%, #FFF5F0 60%, #FFFBEB 100%);
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* 花瓣飘落 */
+        .petal {
+            position: absolute;
+            font-size: 24px;
+            animation: petalFall linear infinite;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0.8;
+        }
+        @keyframes petalFall {
+            0%   { transform: translateY(-60px) rotate(0deg) translateX(0); opacity: 0.9; }
+            25%  { transform: translateY(25vh) rotate(90deg) translateX(40px); }
+            50%  { transform: translateY(50vh) rotate(180deg) translateX(-30px); }
+            75%  { transform: translateY(75vh) rotate(270deg) translateX(50px); opacity: 0.5; }
+            100% { transform: translateY(105vh) rotate(360deg) translateX(-20px); opacity: 0; }
+        }
+
+        .wedding-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #C0392B;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .wedding-couple {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 3;
+        }
+        .wedding-couple .bride { color: #E91E63; }
+        .wedding-couple .groom { color: #5B2C6F; }
+        .wedding-couple .heart-connect { font-size: 2rem; }
+
+        /* 宣誓台 */
+        .vows-podium {
+            background: rgba(255,255,255,0.9);
+            border-radius: 20px;
+            padding: 30px 25px;
+            max-width: 550px;
+            margin: 0 auto;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 3;
+            min-height: 200px;
+        }
+
+        .vow-line {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            padding: 10px 0;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.6s ease;
+            text-align: left;
+        }
+        .vow-line.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .vow-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 24px;
+            position: relative;
+            z-index: 3;
+        }
+
+        /* 烟花 Canvas */
+        #fireworkCanvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* 结婚证 */
+        .certificate {
+            background: linear-gradient(135deg, #FFFEFA, #FFF5EE, #FFFAF0);
+            border: 4px double #D4A574;
+            border-radius: 16px;
+            padding: 35px 25px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 36px rgba(0,0,0,0.12);
+            position: relative;
+            animation: certAppear 1s ease;
+        }
+        @keyframes certAppear {
+            from { opacity: 0; transform: scale(0.85); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        .cert-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #C0392B;
+            margin-bottom: 20px;
+        }
+
+        .cert-photos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .cert-photo-frame {
+            width: 150px;
+            height: 150px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 3px solid #E8D5B7;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            background: #F5F0EB;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .cert-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .cert-photo-frame .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #C0B5A5;
+            font-size: 0.75rem;
+            border: 2px dashed #D4C4B0;
+            border-radius: 16px;
+            gap: 6px;
+        }
+        .cert-photo-frame .photo-placeholder .cam-emoji {
+            font-size: 40px;
+        }
+
+        .cert-photo-label {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-top: 4px;
+            text-align: center;
+        }
+
+        .cert-heart {
+            font-size: 36px;
+            color: #E74C3C;
+            animation: heartBeat 1s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            15%  { transform: scale(1.25); }
+            30%  { transform: scale(1); }
+            45%  { transform: scale(1.2); }
+            60%  { transform: scale(1); }
+        }
+
+        .cert-info {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            line-height: 2;
+            color: var(--text);
+        }
+        .cert-info strong {
+            color: #8B6914;
+        }
+
+        .cert-bottom-note {
+            font-size: 0.82rem;
+            color: #C0392B;
+            margin-top: 16px;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .cert-save-btn {
+            margin-top: 16px;
+        }
+
+        .save-feedback {
+            display: none;
+            color: #27AE60;
+            font-weight: 700;
+            margin-top: 8px;
+            animation: fadeInUp 0.4s ease;
+        }
+        .save-feedback.show { display: block; }
+
+        /* ============================================================
+           板块五：友谊永续契约
+           ============================================================ */
+        .contract-card {
+            background: linear-gradient(135deg, #FFF8E7, #FEF5E7, #FDEBD0);
+            border: 3px solid #E8D5B7;
+            border-radius: 16px;
+            padding: 30px 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            line-height: 2;
+            animation: parchmentUnroll 1s ease;
+        }
+        .contract-card .contract-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-align: center;
+            color: #8B6914;
+            margin-bottom: 16px;
+        }
+        .contract-card .contract-body {
+            font-size: 0.95rem;
+            color: #5D4E37;
+        }
+        .contract-card .contract-body .item {
+            margin: 6px 0;
+            padding-left: 10px;
+        }
+
+        /* ============================================================
+           页面底部
+           ============================================================ */
+        .footer {
+            text-align: center;
+            padding: 30px 20px 40px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--pink-deep);
+        }
+
+        /* 右下角相识天数 */
+        .day-counter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 10px 18px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            z-index: 100;
+            border: 2px solid var(--pink);
+        }
+
+        /* 音乐控制 */
+        .music-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.85);
+            border: 2px solid var(--pink);
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 200;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all var(--transition);
+        }
+        .music-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+        }
+
+        /* ============================================================
+           动画工具类
+           ============================================================ */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes confettiDrop {
+            0%   { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        }
+
+        .confetti-piece {
+            position: fixed;
+            font-size: 24px;
+            animation: confettiDrop linear forwards;
+            pointer-events: none;
+            z-index: 1001;
+        }
+
+        /* ============================================================
+           响应式适配
+           ============================================================ */
+        @media (max-width: 600px) {
+            .hero-birthday-line { font-size: 1.3rem; }
+            .hero-friendship-line { font-size: 0.95rem; }
+            .card { padding: 20px 16px; margin: 18px 0; }
+            .card-title { font-size: 1.25rem; }
+            .gacha-machine { transform: scale(0.85); }
+            .cert-photos { gap: 8px; }
+            .cert-photo-frame { width: 120px; height: 120px; }
+            .cert-heart { font-size: 28px; }
+            .wedding-couple { font-size: 1rem; gap: 15px; }
+            .wedding-title { font-size: 1.3rem; }
+            .vow-line { font-size: 0.92rem; }
+            .btn { padding: 12px 24px; font-size: 0.9rem; }
+            .day-counter { bottom: 12px; right: 12px; padding: 8px 14px; font-size: 0.78rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== 背景装饰 ========== -->
+    <div class="bg-decorations">
+        <span class="bg-cloud">☁️</span>
+        <span class="bg-cloud">☁️</span>
+        <span class="bg-cloud">☁️</span>
+        <span class="bg-cloud">☁️</span>
+        <span class="bg-cloud">☁️</span>
+        <span class="bg-cloud">☁️</span>
+        <span class="bg-star">✨</span>
+        <span class="bg-star">⭐</span>
+        <span class="bg-star">✨</span>
+        <span class="bg-star">🌟</span>
+        <span class="bg-star">✨</span>
+        <span class="bg-star">⭐</span>
+        <span class="bg-star">✨</span>
+        <span class="bg-star">🌟</span>
+    </div>
+
+    <!-- ========== 背景音乐 ========== -->
+    <audio id="bgMusic" loop preload="auto" volume="0.3">
+        <source src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 音乐开关 -->
+    <button class="music-toggle" id="musicToggle" title="背景音乐开关">🔇</button>
+
+    <!-- 烟花 Canvas -->
+    <canvas id="fireworkCanvas"></canvas>
+
+    <!-- ========== 主容器 ========== -->
+    <div class="main-container" id="mainContainer">
+
+        <!-- ========================================================
+             页面顶部
+             ======================================================== -->
+        <section class="hero-section">
+            <div class="hero-birthday-line">
+                🎂 1998.6.30 —— 2026.6.30 · 许蒋将女士的28岁生日 🎂
+            </div>
+            <div class="hero-friendship-line">
+                ✨ 我们相识于初一 · 至今已陪伴彼此 <span class="years-num" id="friendshipYears">16</span> 年 ✨
+            </div>
+        </section>
+
+        <!-- ========================================================
+             板块一：人物属性面板
+             ======================================================== -->
+        <section class="card" id="section1">
+            <div class="card-title">🎮 角色状态栏 · 许蒋将女士</div>
+            <div class="attribute-list">
+
+                <!-- 属性1: ISFP艺术家人格 -->
+                <div class="attribute-item">
+                    <div class="attribute-label">
+                        <span>🎨 ISFP艺术家人格</span>
+                        <span class="attribute-value" style="color:#9B59B6;">89%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill purple-bar" style="width:89%;"></div>
+                    </div>
+                    <div class="evidence-bubble">
+                        认证依据：内心戏丰富程度堪比奥斯卡，表面风平浪静，内心已经演完了一部连续剧。
+                    </div>
+                </div>
+
+                <!-- 属性2: 睡眠爱好者·踩点大师 -->
+                <div class="attribute-item">
+                    <div class="attribute-label">
+                        <span>💤 睡眠爱好者·踩点大师</span>
+                        <span class="attribute-value" style="color:#2980B9;">溢出⚡</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill blue-bar overflow" style="width:100%;"></div>
+                    </div>
+                    <div class="evidence-bubble">
+                        认证依据：闹钟响了10次依然能精准卡点打卡上班，时间管理大师级别。
+                    </div>
+                </div>
+
+                <!-- 属性3: 善良细腻·共情超能力者 -->
+                <div class="attribute-item">
+                    <div class="attribute-label">
+                        <span>💗 善良细腻·共情超能力者</span>
+                        <span class="attribute-value" style="color:#E74C3C;">97%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill pink-bar" style="width:97%;"></div>
+                    </div>
+                    <div class="evidence-bubble">
+                        认证依据：看剧哭、看小说哭、看广告都能哭，世界上另一个我。
+                    </div>
+                </div>
+
+                <!-- 属性4: 剧集补完计划·终身成就奖 -->
+                <div class="attribute-item">
+                    <div class="attribute-label">
+                        <span>📺 剧集补完计划·终身成就奖</span>
+                        <span class="attribute-value" style="color:#F39C12;">95%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill yellow-bar" style="width:95%;"></div>
+                    </div>
+                    <div class="evidence-bubble">
+                        认证依据：阅片量惊人，任何剧荒找她准没错，人形追剧日历。
+                    </div>
+                </div>
+
+            </div>
+            <!-- 彩蛋 -->
+            <div class="observe-note">📋 以上数据基于16年的观察记录</div>
+            <div class="easter-egg-1">⭐ 和你一起完成的事，每一件都算数</div>
+        </section>
+
+        <!-- ========================================================
+             板块二：未来扭蛋机
+             ======================================================== -->
+        <section class="card" id="section2">
+            <div class="card-title">🎰 未来扭蛋机 · Future Gacha</div>
+            <div class="gacha-hint">👇 点击红色摇杆按钮，抽取未来任务卡！</div>
+
+            <div class="gacha-container">
+                <!-- CSS 扭蛋机 -->
+                <div class="gacha-machine">
+                    <div class="gacha-top">
+                        <span class="gacha-tag">FUTURE</span>
+                    </div>
+                    <div class="gacha-body">
+                        <div class="gacha-window">🎁</div>
+                    </div>
+                    <button class="gacha-lever" id="gachaLever" title="点击抽卡！">🎮</button>
+                </div>
+
+                <!-- 掉落任务卡 -->
+                <div class="task-card-popup" id="taskCardPopup">
+                    <div class="task-title" id="taskTitle"></div>
+                    <div class="task-content" id="taskContent"></div>
+                </div>
+
+                <!-- 打卡进度 -->
+                <div class="gacha-progress">
+                    <div class="stars" id="gachaStars">
+                        <span class="unearned">⭐</span><span class="unearned">⭐</span><span class="unearned">⭐</span><span class="unearned">⭐</span><span class="unearned">⭐</span><span class="unearned">⭐</span><span class="unearned">⭐</span>
+                    </div>
+                    <div class="progress-text" id="gachaProgressText">0 / 7 任务已解锁</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             板块三：生日预言生成器
+             ======================================================== -->
+        <section class="card prophecy-section" id="prophecySection">
+            <div class="card-title">🔮 生日预言打印机</div>
+            <div class="prophecy-btn-wrapper">
+                <button class="btn btn-gold" id="printProphecyBtn" onclick="printProphecy()">🖨️ 打印预言</button>
+            </div>
+            <div class="prophecy-card" id="prophecyCard" style="display:none;">
+                <div class="proph-title">【许蒋将女士·2026年度预言报告】</div>
+                <div class="proph-body">
+                    <p>系统扫描对象：<strong>许蒋将女士</strong> | 相识时长：<span id="prophYears">16</span>年</p>
+                    <br>
+                    <p>经系统扫描——</p>
+                    <p>可爱攻击力已超出地球计量范围，</p>
+                    <p>善良指数连续365天爆表，</p>
+                    <p>追剧速度突破人类极限。</p>
+                    <br>
+                    <p>系统预测，在未来365天里：</p>
+                    <p>你将完成至少7件值得骄傲的小事，</p>
+                    <p>解锁3个以上新的人生体验，</p>
+                    <p>开启人生的全新副本——<span class="highlight">婚姻模式</span>。</p>
+                    <br>
+                    <p>但系统特别备注：</p>
+                    <p><strong>此副本不影响任何已有关系。</strong></p>
+                    <p>你和<span class="highlight">【方可女士】</span>的友谊线程，将永久独立运行。</p>
+                    <p>无论你叫许蒋将、还是未来某个人的太太，</p>
+                    <p>在我这里，你永远只是你。</p>
+                    <p>是13岁时初一见到的那个女孩，</p>
+                    <p>是和我走过16年春夏秋冬的人。</p>
+                    <br>
+                    <p>生日快乐，许蒋将女士。</p>
+                    <p>接下来的每一天，请继续被爱、被在乎、被珍惜。</p>
+                </div>
+                <div class="proph-sign">—— 永远爱你的宝</div>
+            </div>
+        </section>
+
+        <!-- 进入婚礼按钮 -->
+        <div class="wedding-enter-btn" id="weddingEnterBtn">
+            <button class="btn btn-wedding" onclick="enterWedding()">💒 进入婚礼殿堂</button>
+        </div>
+
+        <!-- ========================================================
+             板块四：线上婚礼
+             ======================================================== -->
+        <section class="wedding-section" id="weddingSection">
+            <div class="wedding-scene" id="weddingScene">
+                <div class="wedding-title">💒 在友谊的名义下 · 我们在此相聚 💒</div>
+
+                <div class="wedding-couple">
+                    <span class="bride">👰 许蒋将女士<br><small>&nbsp;</small></span>
+                    <span class="heart-connect">💕</span>
+                    <span class="groom">🤵 方可女士<br><small>&nbsp;</small></span>
+                </div>
+
+                <!-- 宣誓台 -->
+                <div class="vows-podium" id="vowsPodium">
+                    <div class="vow-line" id="vowLine"></div>
+                </div>
+
+                <!-- 宣誓按钮 -->
+                <div class="vow-buttons" id="vowButtons" style="display:none;">
+                    <button class="btn btn-pink" onclick="sayIDo(1)">💖 我愿意</button>
+                    <button class="btn btn-purple" onclick="sayIDo(2)">💖 我愿意（超大声）</button>
+                </div>
+            </div>
+
+            <!-- 结婚证 -->
+            <div class="certificate" id="certificate" style="display:none;">
+                <div class="cert-title">💕 友谊结婚证书 💕</div>
+
+                <!-- 照片区 -->
+                <div class="cert-photos">
+                    <div>
+                        <div class="cert-photo-frame" id="photoFrameOld">
+                            <!--
+                            ⚠️ 照片替换说明：
+                            请将你的老照片文件命名为 "老照片.jpg"，放在与本HTML文件相同的目录下。
+                            如果照片加载失败会自动显示占位框。
+                            -->
+                            <img src="老照片.jpg" alt="老照片"
+                                 onerror="this.style.display='none'; this.parentElement.querySelector('.photo-placeholder').style.display='flex';">
+                            <div class="photo-placeholder" style="display:none;">
+                                <span class="cam-emoji">📷</span>
+                                <span>老照片</span>
+                            </div>
+                        </div>
+                        <div class="cert-photo-label">📸 那些年 · 我们刚开始</div>
+                    </div>
+
+                    <span class="cert-heart">❤️</span>
+
+                    <div>
+                        <div class="cert-photo-frame" id="photoFrameNew">
+                            <!--
+                            ⚠️ 照片替换说明：
+                            请将你的新照片文件命名为 "新照片.jpg"，放在与本HTML文件相同的目录下。
+                            如果照片加载失败会自动显示占位框。
+                            -->
+                            <img src="新照片.jpg" alt="新照片"
+                                 onerror="this.style.display='none'; this.parentElement.querySelector('.photo-placeholder').style.display='flex';">
+                            <div class="photo-placeholder" style="display:none;">
+                                <span class="cam-emoji">📷</span>
+                                <span>新照片</span>
+                            </div>
+                        </div>
+                        <div class="cert-photo-label">📸 这些年 · 我们依然是我们</div>
+                    </div>
+                </div>
+
+                <div style="font-size:0.85rem;color:var(--text-light);margin:8px 0;">
+                    从13岁到28岁，从初中到婚纱，我们依然是我们。❤️
+                </div>
+
+                <!-- 证书信息 -->
+                <div class="cert-info">
+                    <p><strong>证书编号：</strong>20260630-<span id="certDays">0000</span></p>
+                    <p><strong>新人：</strong>许蒋将女士 & 方可女士</p>
+                    <p><strong>相识于：</strong>2010年初一 · 至今<span id="certYears">16</span>年</p>
+                    <p><strong>结婚日期：</strong>2026年6月30日</p>
+                    <p><strong>有效期：</strong>众生（生生世世）</p>
+                    <p><strong>见证人：</strong>我们走过的16年时光</p>
+                    <p><strong>证婚人：</strong>时间</p>
+                </div>
+
+                <div class="cert-bottom-note">
+                    本证书优先于一切世俗婚姻法，由友谊最高法颁布。❤️
+                </div>
+
+                <!-- 彩蛋 -->
+                <div style="font-size:0.82rem;color:var(--text-light);margin-top:8px;">
+                    📸 两张照片，隔了整整一个青春
+                </div>
+
+                <!-- 保存按钮 -->
+                <div class="cert-save-btn">
+                    <button class="btn btn-pink" onclick="saveCertificate()">📥 保存这张证书</button>
+                </div>
+                <div class="save-feedback" id="saveFeedback">已保存！❤️<br><small>截图保存到相册吧！</small></div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             板块五：友谊永续契约
+             ======================================================== -->
+        <section class="card" id="section5" style="display:none;">
+            <div class="contract-card">
+                <div class="contract-title">📜 【友谊永续契约】</div>
+                <div class="contract-body">
+                    <p><strong>立约人：</strong>许蒋将女士 & 方可女士</p>
+                    <br>
+                    <p><strong>永久约定：</strong></p>
+                    <p class="item">第一条：无论结婚与否，我们都是彼此最好的朋友。</p>
+                    <p class="item">第二条：未来一起逛街、追剧、聊八卦到变成老太太。</p>
+                    <p class="item">第三条：对方的婚礼上，谁都不许哭得太丑（但可以哭）。</p>
+                    <p class="item">第四条：这一生，并肩前行，谁也不许掉队。</p>
+                    <br>
+                    <p><strong>契约生效日：</strong>2026年6月30日</p>
+                    <p><strong>有效期：</strong>永久有效</p>
+                    <br>
+                    <p><strong>见证人：</strong>时间</p>
+                    <p><strong>见证物：</strong>我们走过的16年</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             页面底部
+             ======================================================== -->
+        <section class="footer">
+            💖 给全世界最可爱的许蒋将女士 · 28岁生日快乐 💖
+        </section>
+
+        <!-- 彩蛋 -->
+        <div style="text-align:center;font-size:0.82rem;color:var(--pink-deep);padding:0 0 30px;opacity:0.8;">
+            从2010到2026，从13岁到28岁，从初中到婚纱
+        </div>
+
+    </div>
+
+    <!-- ========== 右下角相识天数计数器 ========== -->
+    <div class="day-counter" id="dayCounter">
+        📅 已相伴 <span id="daysCount">0</span> 天
+    </div>
+
+    <!-- ============================================================
+         JavaScript 脚本
+         ============================================================ -->
+    <script>
+        (function() {
+            // ============================================================
+            // 常量配置
+            // ============================================================
+            const FRIENDSHIP_START = new Date(2010, 8, 1); // 2010年9月1日 初一开学
+            const BIRTHDAY = new Date(2026, 5, 30); // 2026年6月30日
+            const TODAY = new Date();
+
+            // 计算相识年数（2010到2026）
+            const friendshipYears = 2026 - 2010;
+
+            // ============================================================
+            // 相识天数计算
+            // ============================================================
+            function getDaysBetween(startDate, endDate) {
+                const diff = endDate.getTime() - startDate.getTime();
+                return Math.floor(diff / (1000 * 60 * 60 * 24));
+            }
+            const totalDays = getDaysBetween(FRIENDSHIP_START, TODAY);
+
+            // 更新页面中的年数和天数
+            document.getElementById('friendshipYears').textContent = friendshipYears;
+            document.getElementById('daysCount').textContent = totalDays.toLocaleString();
+            document.getElementById('certDays').textContent = totalDays;
+            document.getElementById('certYears').textContent = friendshipYears;
+            document.getElementById('prophYears').textContent = friendshipYears;
+
+            // ============================================================
+            // 背景音乐
+            // ============================================================
+            const bgMusic = document.getElementById('bgMusic');
+            const musicToggle = document.getElementById('musicToggle');
+            let musicPlaying = false;
+
+            // 尝试自动播放（需用户交互，现代浏览器通常会阻止）
+            bgMusic.volume = 0.3;
+            bgMusic.play().then(() => {
+                musicPlaying = true;
+                musicToggle.textContent = '🔊';
+            }).catch(() => {
+                // 自动播放被阻止，静默跳过
+                musicPlaying = false;
+                musicToggle.textContent = '🔇';
+            });
+
+            musicToggle.addEventListener('click', () => {
+                if (musicPlaying) {
+                    bgMusic.pause();
+                    musicToggle.textContent = '🔇';
+                } else {
+                    bgMusic.play().then(() => {
+                        musicToggle.textContent = '🔊';
+                    }).catch(() => {});
+                }
+                musicPlaying = !musicPlaying;
+            });
+
+            // ============================================================
+            // 扭蛋机逻辑
+            // ============================================================
+            const allTasks = [
+                { title: '【主线任务】', content: '本月下月下下月31天都要和宝聊天。<br>奖励：宝的每日贴心早安。' },
+                { title: '【支线任务】', content: '选一个周末，和我去一个你没去过的地方短途旅行！<br>奖励：我当全程摄影师+精修图九宫格。' },
+                { title: '【隐藏副本】', content: '今天必须接受我一段肉麻的生日语音祝福，不许反驳不许跳过！<br>奖励：我的专属夸夸券一张。' },
+                { title: '【日常任务】', content: '找一部我们都没看过的剧，约定一起追完！<br>奖励：每周五晚的云吐槽大会+零食基金。' },
+                { title: '【特殊任务】', content: '和我拍一组超级无敌好看的照片！<br>奖励：我做你的专属修图师+相框摆台。' },
+                { title: '【终极任务】', content: '今年，我们要一起做很多很多事——做手工、聊八卦、吃好吃的、看好看的。<br>奖励：一年的陪伴。' },
+                { title: '【永恒任务】', content: '你即将开启人生新篇章，但请记住——无论你结不结婚，我永远是你的后盾。<br>奖励：一辈子的友谊。' }
+            ];
+
+            let remainingTasks = [...allTasks];
+            let drawnTasks = [];
+            const taskCardPopup = document.getElementById('taskCardPopup');
+            const taskTitle = document.getElementById('taskTitle');
+            const taskContent = document.getElementById('taskContent');
+            const gachaLever = document.getElementById('gachaLever');
+            const gachaStars = document.getElementById('gachaStars');
+            const gachaProgressText = document.getElementById('gachaProgressText');
+            const prophecySection = document.getElementById('prophecySection');
+            const weddingEnterBtn = document.getElementById('weddingEnterBtn');
+            const section5 = document.getElementById('section5');
+
+            function updateStars() {
+                const starsContainer = gachaStars;
+                let html = '';
+                for (let i = 0; i < 7; i++) {
+                    html += i < drawnTasks.length
+                        ? '<span class="earned">⭐</span>'
+                        : '<span class="unearned">⭐</span>';
+                }
+                starsContainer.innerHTML = html;
+                gachaProgressText.textContent = drawnTasks.length + ' / 7 任务已解锁';
+
+                // 全部抽完 → 解锁预言板块
+                if (drawnTasks.length === 7) {
+                    gachaLever.classList.add('disabled');
+                    gachaLever.textContent = '✅';
+                    prophecySection.classList.add('unlocked');
+                    // 滚动到预言区域
+                    setTimeout(() => {
+                        prophecySection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 500);
+                }
+            }
+
+            gachaLever.addEventListener('click', () => {
+                if (remainingTasks.length === 0) return;
+
+                // 震动动画
+                gachaLever.style.animation = 'none';
+                void gachaLever.offsetWidth; // reflow
+                gachaLever.style.animation = 'leverShake 0.3s ease';
+
+                // 随机抽取一个任务
+                const randomIndex = Math.floor(Math.random() * remainingTasks.length);
+                const pickedTask = remainingTasks.splice(randomIndex, 1)[0];
+                drawnTasks.push(pickedTask);
+
+                // 显示任务卡
+                taskTitle.textContent = pickedTask.title;
+                taskContent.innerHTML = pickedTask.content;
+                taskCardPopup.classList.remove('show');
+                void taskCardPopup.offsetWidth;
+                taskCardPopup.classList.add('show');
+
+                // 更新星星
+                updateStars();
+
+                // 3.5秒后自动隐藏任务卡
+                setTimeout(() => {
+                    taskCardPopup.classList.remove('show');
+                }, 3500);
+            });
+
+            // ============================================================
+            // 预言打印机
+            // ============================================================
+            window.printProphecy = function() {
+                const card = document.getElementById('prophecyCard');
+                card.style.display = 'block';
+                card.style.animation = 'none';
+                void card.offsetWidth;
+                card.style.animation = 'parchmentUnroll 1s ease';
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // 显示进入婚礼按钮和友谊契约
+                setTimeout(() => {
+                    weddingEnterBtn.classList.add('show');
+                    section5.style.display = 'block';
+                }, 1500);
+            };
+
+            // ============================================================
+            // 进入婚礼
+            // ============================================================
+            window.enterWedding = function() {
+                const weddingSection = document.getElementById('weddingSection');
+                weddingSection.classList.add('active');
+                weddingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // 启动花瓣动画
+                startPetals();
+
+                // 开始誓词显示
+                setTimeout(startVows, 1200);
+            };
+
+            // ============================================================
+            // 花瓣飘落动画
+            // ============================================================
+            let petalInterval;
+            function startPetals() {
+                const scene = document.getElementById('weddingScene');
+                const petalEmojis = ['🌸', '💮', '🌷', '🪷', '💐', '🌺'];
+
+                function createPetal() {
+                    const petal = document.createElement('span');
+                    petal.className = 'petal';
+                    petal.textContent = petalEmojis[Math.floor(Math.random() * petalEmojis.length)];
+                    petal.style.left = Math.random() * 100 + '%';
+                    petal.style.animationDuration = (Math.random() * 6 + 6) + 's';
+                    petal.style.animationDelay = Math.random() * 3 + 's';
+                    petal.style.fontSize = (Math.random() * 20 + 18) + 'px';
+                    scene.appendChild(petal);
+
+                    // 动画结束后移除
+                    setTimeout(() => {
+                        if (petal.parentNode) petal.parentNode.removeChild(petal);
+                    }, 12000);
+                }
+
+                // 初始创建一批花瓣
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(() => createPetal(), i * 150);
+                }
+
+                // 持续创建花瓣
+                petalInterval = setInterval(createPetal, 800);
+            }
+
+            function stopPetals() {
+                clearInterval(petalInterval);
+                // 清除所有花瓣
+                document.querySelectorAll('.petal').forEach(p => p.remove());
+            }
+
+            // ============================================================
+            // 誓词逐句显示
+            // ============================================================
+            const vowLines = [
+                '我，许蒋将女士，',
+                '在今日，在友谊的名义下，',
+                '自愿与【方可女士】缔结此生不渝的姐妹盟约。',
+                '',
+                '我承诺：',
+                '无论未来嫁给谁、住在哪里、变成什么模样，',
+                '我永远是她16年前初一时认识的那个我，',
+                '也永远是她可以随时依靠的那个人。',
+                '',
+                '我承诺：',
+                '即便我们的生命里有了新的角色、新的身份、新的家人，',
+                '我们之间的这一席之地，永远为彼此保留。',
+                '',
+                '从13岁到28岁，从初中到婚纱，从今天到未来——',
+                '我都会是她最好的朋友，',
+                '并且对此，我永远，永远，心甘情愿。'
+            ];
+
+            let vowIndex = 0;
+            let vowTimer;
+
+            function startVows() {
+                const vowLine = document.getElementById('vowLine');
+                vowIndex = 0;
+                showNextVow();
+
+                function showNextVow() {
+                    if (vowIndex >= vowLines.length) {
+                        // 誓词结束，显示按钮
+                        document.getElementById('vowButtons').style.display = 'flex';
+                        return;
+                    }
+
+                    vowLine.textContent = vowLines[vowIndex];
+                    vowLine.classList.remove('visible');
+                    void vowLine.offsetWidth;
+                    vowLine.classList.add('visible');
+                    vowIndex++;
+
+                    // 空行快速跳过，正常行1.8秒间隔
+                    const delay = vowLines[vowIndex - 1] === '' ? 600 : 1800;
+                    vowTimer = setTimeout(showNextVow, delay);
+                }
+            }
+
+            // ============================================================
+            // "我愿意" 按钮 → 烟花 + 结婚证
+            // ============================================================
+            window.sayIDo = function(volume) {
+                // 隐藏按钮
+                document.getElementById('vowButtons').style.display = 'none';
+
+                // 停止花瓣
+                stopPetals();
+
+                // 发射烟花
+                launchFireworks(volume === 2 ? 60 : 40);
+
+                // 发射彩带
+                launchConfetti();
+
+                // 显示结婚证
+                setTimeout(() => {
+                    const cert = document.getElementById('certificate');
+                    cert.style.display = 'block';
+                    cert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 1500);
+            };
+
+            // ============================================================
+            // Canvas 烟花效果
+            // ============================================================
+            const canvas = document.getElementById('fireworkCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
+            const particles = [];
+            const fireworks = [];
+
+            class Particle {
+                constructor(x, y, color) {
+                    this.x = x;
+                    this.y = y;
+                    this.color = color;
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = Math.random() * 6 + 2;
+                    this.vx = Math.cos(angle) * speed;
+                    this.vy = Math.sin(angle) * speed;
+                    this.life = 1;
+                    this.decay = Math.random() * 0.02 + 0.015;
+                    this.size = Math.random() * 3 + 1;
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.vy += 0.06; // 重力
+                    this.life -= this.decay;
+                }
+                draw(ctx) {
+                    ctx.save();
+                    ctx.globalAlpha = this.life;
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            function launchFireworks(count) {
+                const colors = ['#FF6B6B', '#FFD93D', '#6BCB77', '#4D96FF', '#FF8DC7', '#C084FC',
+                    '#FB923C', '#F472B6', '#A78BFA', '#34D399'
+                ];
+
+                // 启动动画循环
+                if (!window._fireworkAnimating) {
+                    window._fireworkAnimating = true;
+                    animateFireworks();
+                }
+
+                // 在屏幕随机位置发射烟花
+                for (let i = 0; i < count; i++) {
+                    setTimeout(() => {
+                        const x = Math.random() * canvas.width * 0.8 + canvas.width * 0.1;
+                        const y = Math.random() * canvas.height * 0.5 + canvas.height * 0.1;
+                        const color = colors[Math.floor(Math.random() * colors.length)];
+                        const particleCount = Math.floor(Math.random() * 40 + 30);
+
+                        for (let j = 0; j < particleCount; j++) {
+                            particles.push(new Particle(x, y, color));
+                        }
+                    }, i * 15);
+                }
+            }
+
+            function animateFireworks() {
+                if (!window._fireworkAnimating) return;
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    particles[i].update();
+                    particles[i].draw(ctx);
+                    if (particles[i].life <= 0) {
+                        particles.splice(i, 1);
+                    }
+                }
+
+                if (particles.length > 0) {
+                    requestAnimationFrame(animateFireworks);
+                } else {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    window._fireworkAnimating = false;
+                }
+            }
+
+            // ============================================================
+            // 彩带效果
+            // ============================================================
+            function launchConfetti() {
+                const confettiEmojis = ['🎉', '🎊', '✨', '💖', '🌟', '💕', '🎀', '💝', '🥳', '💫'];
+                const confettiCount = 50;
+
+                for (let i = 0; i < confettiCount; i++) {
+                    setTimeout(() => {
+                        const piece = document.createElement('span');
+                        piece.className = 'confetti-piece';
+                        piece.textContent = confettiEmojis[Math.floor(Math.random() * confettiEmojis.length)];
+                        piece.style.left = Math.random() * 100 + '%';
+                        piece.style.top = -(Math.random() * 60 + 20) + 'px';
+                        piece.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                        piece.style.animationDelay = '0s';
+                        piece.style.fontSize = (Math.random() * 20 + 18) + 'px';
+                        document.body.appendChild(piece);
+
+                        // 动画结束后移除
+                        setTimeout(() => {
+                            if (piece.parentNode) piece.parentNode.removeChild(piece);
+                        }, 5000);
+                    }, i * 30);
+                }
+            }
+
+            // ============================================================
+            // 保存证书
+            // ============================================================
+            window.saveCertificate = function() {
+                const feedback = document.getElementById('saveFeedback');
+                feedback.classList.add('show');
+                // 点击动画效果
+                const btn = document.querySelector('.cert-save-btn .btn');
+                btn.style.transform = 'scale(0.95)';
+                setTimeout(() => { btn.style.transform = ''; }, 200);
+            };
+
+            // ============================================================
+            // 滚动时渐显动画（Intersection Observer）
+            // ============================================================
+            const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 为进度条添加动画（重新触发宽度过渡）
+                        const fills = entry.target.querySelectorAll('.progress-bar-fill');
+                        fills.forEach(fill => {
+                            const currentWidth = fill.style.width;
+                            fill.style.width = '0%';
+                            setTimeout(() => { fill.style.width = currentWidth; }, 100);
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.card').forEach(card => observer.observe(card));
+
+            // ============================================================
+            // 初始化完成日志
+            // ============================================================
+            console.log('💖 许蒋将女士的生日惊喜网站已就绪！');
+            console.log('📅 相识天数：' + totalDays + ' 天');
+            console.log('✨ 从 2010 到 2026，从 13 岁到 28 岁，从初中到婚纱 ✨');
+            console.log('💒 祝许蒋将女士 28 岁生日快乐！');
+
+        })();
+    </script>
+
+</body>
+</html>
